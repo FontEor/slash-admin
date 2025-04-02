@@ -1,5 +1,6 @@
 {
   "sys": {
+    "title": "Open Platform",
     "api": {
       "operationSuccess": "Operation Success",
       "operationFailed": "Operation failed",
