@@ -13,7 +13,7 @@ function App() {
 		<ThemeProvider adapters={[AntdAdapter]}>
 			<MotionLazy>
 				<Helmet>
-					<title>Slash Admin</title>
+					<title>开放平台</title>
 					<link rel="icon" href={Logo} />
 				</Helmet>
 				<Toast />

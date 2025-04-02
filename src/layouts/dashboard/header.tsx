@@ -55,15 +55,11 @@ export default function Header() {
 						)}
 						<div className="ml-4 hidden md:block">{breadCrumb ? <BreadCrumb /> : null}</div>
 					</div>
-
 					<div className="flex">
 						<SearchBar />
 						<LocalePicker />
 						<IconButton onClick={() => window.open("https://github.com/d3george/slash-admin")}>
 							<Iconify icon="mdi:github" size={24} />
-						</IconButton>
-						<IconButton onClick={() => window.open("https://discord.gg/fXemAXVNDa")}>
-							<Iconify icon="carbon:logo-discord" size={24} />
 						</IconButton>
 						<NoticeButton />
 						<SettingButton />

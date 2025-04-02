@@ -40,7 +40,6 @@ function buildCompleteRoute(
 	// Find parent and continue recursion
 	const parent = flattenedPermissions.find((p) => p.id === permission.parentId);
 	if (!parent) {
-		console.warn(`Parent permission not found for ID: ${permission.parentId}`);
 		return `/${segments.join("/")}`;
 	}
 

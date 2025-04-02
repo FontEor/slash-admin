@@ -37,7 +37,6 @@ export default function useLocale() {
 	const setLocale = (locale: Locale) => {
 		i18n.changeLanguage(locale);
 	};
-
 	const locale = (i18n.resolvedLanguage || LocalEnum.en_US) as Locale;
 
 	const language = LANGUAGE_MAP[locale];

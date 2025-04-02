@@ -17,7 +17,6 @@ export default function useCopyToClipboard(): ReturnType {
 
 	const copyFn: CopyFn = async (text) => {
 		if (!navigator?.clipboard) {
-			console.warn("Clipboard not supported");
 			return false;
 		}
 
@@ -28,7 +27,6 @@ export default function useCopyToClipboard(): ReturnType {
 			toast.success("Copied!");
 			return true;
 		} catch (error) {
-			console.warn("Copy failed", error);
 			setCopiedText(null);
 			return false;
 		}
