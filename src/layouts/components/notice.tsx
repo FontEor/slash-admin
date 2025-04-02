@@ -6,6 +6,7 @@ import CyanBlur from "@/assets/images/background/cyan-blur.png";
 import RedBlur from "@/assets/images/background/red-blur.png";
 import { IconButton, Iconify, SvgIcon } from "@/components/icon";
 import { themeVars } from "@/theme/theme.css";
+import { t } from "i18next";
 
 export default function NoticeButton() {
 	const [drawerOpen, setDrawerOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function NoticeButton() {
 			</IconButton>
 			<Drawer
 				placement="right"
-				title="Notifications"
+				title={t("sys.notifications.notification")}
 				onClose={() => setDrawerOpen(false)}
 				open={drawerOpen}
 				closable={false}
@@ -61,7 +62,7 @@ export default function NoticeButton() {
 						style={{ color: themeVars.colors.text.primary }}
 						className="flex h-10 w-full items-center justify-center font-semibold"
 					>
-						View All
+						{t("sys.notifications.viewAll")}
 					</div>
 				}
 			>
@@ -223,7 +224,7 @@ function NoticeTab() {
 			key: "1",
 			label: (
 				<div className="flex">
-					<span>All</span>
+					<span>{t("sys.notifications.all")}</span>
 					<Tag color="processing">22</Tag>
 				</div>
 			),
@@ -233,7 +234,7 @@ function NoticeTab() {
 			key: "2",
 			label: (
 				<div className="flex">
-					<span>Unread</span>
+					<span>{t("sys.notifications.unread")}</span>
 					<Tag color="error">12</Tag>
 				</div>
 			),
@@ -243,7 +244,7 @@ function NoticeTab() {
 			key: "3",
 			label: (
 				<div className="flex">
-					<span>Archived</span>
+					<span>{t("sys.notifications.read")}</span>
 					<Tag color="green">10</Tag>
 				</div>
 			),

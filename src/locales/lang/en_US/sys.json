@@ -159,6 +159,13 @@
         "500": "500"
       }
     },
+    "notifications": {
+      "notification": "Notifications",
+      "viewAll": "View All",
+      "all": "All",
+      "unread": "Unread",
+      "read": "Read"
+    },
     "docs": "Document"
   }
 }
