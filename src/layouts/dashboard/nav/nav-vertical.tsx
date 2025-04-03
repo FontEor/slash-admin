@@ -34,7 +34,9 @@ export default function NavVertical(props: Props) {
 	const collapsed = useMemo(() => themeLayout === ThemeLayout.Mini, [themeLayout]);
 
 	const menuList = useMemo(() => {
+		console.log(permissionRoutes,'permissionRoutes')
 		const menuRoutes = menuFilter(permissionRoutes);
+		console.log(menuRoutes,'menuRoutes')
 		return routeToMenuFn(menuRoutes);
 	}, [routeToMenuFn, permissionRoutes]);
 
