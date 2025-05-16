@@ -19,7 +19,7 @@ export default function AreaDownload() {
 		],
 	};
 	return (
-		<Card className="flex-col">
+		<Card className="flex-col h-full">
 			<header className="flex w-full justify-between self-start">
 				<Typography.Title level={5}>Area Installed</Typography.Title>
 				<Select

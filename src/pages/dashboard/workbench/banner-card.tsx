@@ -6,11 +6,9 @@ import { Col, Row } from "antd";
 
 export default function BannerCard() {
 	const { username } = useUserInfo();
-
 	const bg = `linear-gradient(135deg, rgba(${themeVars.colors.palette.primary.lightChannel}, .2), rgba(${themeVars.colors.palette.primary.defaultChannel}, .2)) ${themeVars.colors.common.white}`;
-
 	return (
-		<Row className="!mx-0 rounded-2xl p-7" gutter={[16, 16]} justify="space-between" style={{ background: bg }}>
+		<Row className="!mx-0 rounded-2xl p-7 h-full" gutter={[16, 16]} justify="space-between" style={{ background: bg }}>
 			<Col span={24} md={12} xl={16} className="flex-1 text-center md:text-left">
 				<div className="mt-4 text-lg font-semibold md:text-xl" style={{ color: themeVars.colors.palette.primary.dark }}>
 					<h4>Welcome back 👋 </h4>

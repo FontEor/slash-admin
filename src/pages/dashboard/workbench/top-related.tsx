@@ -50,7 +50,7 @@ const dataSource = [
 ];
 export default function TopRelated() {
 	return (
-		<Card className="flex-col">
+		<Card className="flex-col h-full">
 			<header className="self-start">
 				<Typography.Title level={5}>Top Related Applications</Typography.Title>
 			</header>

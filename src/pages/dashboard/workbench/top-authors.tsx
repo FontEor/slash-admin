@@ -26,7 +26,7 @@ export default function TopAuthor() {
 		}
 	};
 	return (
-		<Card className="flex-col">
+		<Card className="flex-col h-full">
 			<header className="self-start">
 				<Typography.Title level={5}>Top Authors</Typography.Title>
 			</header>

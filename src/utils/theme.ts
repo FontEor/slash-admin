@@ -81,6 +81,7 @@ export const toCssVar = (propertyPath: string) => {
  */
 export const toCssVars = (propertyPath: string) => {
 	const variants = getThemeTokenVariants(propertyPath);
+	console.log(variants,'variants::')
 	const result = variants.reduce(
 		(acc, variant) => {
 			const variantKey = variant === "default" ? "DEFAULT" : variant;
