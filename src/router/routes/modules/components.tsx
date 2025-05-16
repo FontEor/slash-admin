@@ -5,19 +5,18 @@ import { Iconify } from "@/components/icon";
 import { CircleLoading } from "@/components/loading";
 
 import ToastPage from "@/pages/components/toast";
+
 import type { AppRouteObject } from "#/router";
 
 const AnimatePage = lazy(() => import("@/pages/components/animate"));
 const ScrollPage = lazy(() => import("@/pages/components/scroll"));
 const MarkdownPage = lazy(() => import("@/pages/components/markdown"));
 const EditorPage = lazy(() => import("@/pages/components/editor"));
-const MultiLanguagePage = lazy(
-	() => import("@/pages/components/multi-language"),
-);
+const MultiLanguagePage = lazy(() => import("@/pages/components/multi-language"));
 const IconPage = lazy(() => import("@/pages/components/icon"));
 const UploadPage = lazy(() => import("@/pages/components/upload"));
 const ChartPage = lazy(() => import("@/pages/components/chart"));
-
+const CountTo = lazy(() => import("@/pages/components/count"));
 const components: AppRouteObject = {
 	order: 3,
 	path: "components",
@@ -28,13 +27,7 @@ const components: AppRouteObject = {
 	),
 	meta: {
 		label: "sys.menu.components",
-		icon: (
-			<Iconify
-				icon="solar:widget-5-bold-duotone"
-				className="ant-menu-item-icon"
-				size="24"
-			/>
-		),
+		icon: <Iconify icon="solar:widget-5-bold-duotone" className="ant-menu-item-icon" size="24" />,
 		key: "/components",
 	},
 	children: [
@@ -86,6 +79,11 @@ const components: AppRouteObject = {
 			path: "toast",
 			element: <ToastPage />,
 			meta: { label: "sys.menu.toast", key: "/components/toast" },
+		},
+		{
+			path: "countTo",
+			element: <CountTo />,
+			meta: { label: "sys.menu.count", key: "/components/count" },
 		},
 	],
 };

@@ -79,7 +79,6 @@ function Workbench() {
 				<Col span={24} md={12}>
 					<TopInstalled />
 				</Col>
-
 				<Col span={24} md={12}>
 					<TopAuthor />
 				</Col>
