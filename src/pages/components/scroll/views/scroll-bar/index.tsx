@@ -26,7 +26,7 @@ export default function ScrollbarView() {
 				<Col span={23} lg={12}>
 					<Card title="Horizontal">
 						<Scrollbar>
-							<div style={{ width: "200%" }}>{TEXT}</div>
+							<div style={{ width: "200%",height: "420px" }}>{TEXT}</div>
 						</Scrollbar>
 					</Card>
 				</Col>

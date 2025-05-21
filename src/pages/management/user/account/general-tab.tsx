@@ -32,14 +32,12 @@ export default function GeneralTab() {
 	return (
 		<Row gutter={[16, 16]}>
 			<Col span={24} lg={8}>
-				<Card className="flex-col !px-6 !pb-10 !pt-20">
+				<Card className="flex-col !px-6 !pb-10 !pt-20 ">
 					<UploadAvatar defaultAvatar={avatar} />
-
 					<Space className="py-6">
 						<div>Public Profile</div>
 						<Switch size="small" />
 					</Space>
-
 					<Button type="primary" danger>
 						Delete User
 					</Button>

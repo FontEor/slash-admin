@@ -78,7 +78,7 @@ export default function ProjectsTab() {
 		<Row gutter={[16, 16]}>
 			{items.map((item) => (
 				<Col span={24} md={12} key={item.name}>
-					<Card className="w-full flex-col">
+					<Card className="w-full flex-col h-full">
 						<header className="flex w-full items-center">
 							{item.icon}
 

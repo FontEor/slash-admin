@@ -65,6 +65,6 @@ export default function ChartMixed() {
 	});
 
 	return (
-		<Chart type="line" series={series} options={chartOptions} height={320} />
+		<Chart type="line" series={series} options={chartOptions} height={350} />
 	);
 }

@@ -145,11 +145,9 @@ export function usePermissionRoutes() {
 	if (ROUTE_MODE === "module") {
 		return getRoutesFromModules();
 	}
-
 	const permissions = useUserPermission();
 	return useMemo(() => {
 		if (!permissions) return [];
-
 		const flattenedPermissions = flattenTrees(permissions);
 		return transformPermissionsToRoutes(permissions, flattenedPermissions);
 	}, [permissions]);

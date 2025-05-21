@@ -99,7 +99,7 @@ function Analysis() {
 					</Card>
 				</Col>
 				<Col span={24} lg={12} xl={8}>
-					<Card title="Order Timeline">
+					<Card title="Order Timeline" className="h-full">
 						<AnalysisOrderTimeline />
 					</Card>
 				</Col>
@@ -145,7 +145,7 @@ function Analysis() {
 				</Col>
 
 				<Col span={24} lg={12} xl={16}>
-					<Card title="Tasks">
+					<Card title="Tasks" className="h-full"> 
 						<AnalysisTasks />
 					</Card>
 				</Col>

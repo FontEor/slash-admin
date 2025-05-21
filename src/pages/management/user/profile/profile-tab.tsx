@@ -195,7 +195,7 @@ export default function ProfileTab() {
 		<>
 			<Row gutter={[16, 16]}>
 				<Col span={24} md={12} lg={8}>
-					<Card className="flex-col">
+					<Card className="flex-col h-full">
 						<div className="flex w-full flex-col">
 							<Typography.Title level={5}>About</Typography.Title>
 							<Typography.Text>{faker.lorem.paragraph()}</Typography.Text>
