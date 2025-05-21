@@ -136,7 +136,6 @@ export default function Kanban() {
 		}
 	};
 	useEvent("click", handleClickOutside);
-
 	const createColumn = (column: Column) => {
 		const newState: DndDataType = {
 			...state,
@@ -148,7 +147,6 @@ export default function Kanban() {
 		};
 		setState(newState);
 	};
-
 	const createTask = (columnId: string, task: Task) => {
 		const column = state.columns[columnId];
 		const newState: DndDataType = {

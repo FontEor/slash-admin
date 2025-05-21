@@ -1,9 +1,6 @@
 import { useCallback, useMemo } from "react";
-
 import { flattenMenuRoutes, menuFilter } from "../utils";
-
 import { usePermissionRoutes } from "./use-permission-routes";
-
 /**
  * 返回拍平后的菜单路由
  */
