@@ -1,7 +1,5 @@
 import { Col, Row, Space } from "antd";
-
 import AreaDownload from "./area-download";
-import BannerCard from "./banner-card";
 import { Applications, Conversion } from "./conversion_applications";
 import CurrentDownload from "./current-download";
 import NewInvoice from "./new-invoice";
@@ -9,19 +7,40 @@ import TopAuthor from "./top-authors";
 import TopInstalled from "./top-installed";
 import TopRelated from "./top-related";
 import TotalCard from "./total-card";
-
 function Workbench() {
+	const obj = {
+		conversion: {
+			count: '38,566',
+			percent:48
+		},
+		applications: {
+			count: '45,566',
+			percent:75
+		},
+		totalActiveUsers: {
+			count: '18,765',
+			percent: "2.6%",
+			chartData:[22, 8, 35, 50, 82, 84, 77, 12, 87, 43]
+		},
+		totalInstalled: {
+			count: '4,876',
+			percent: "0.2%",
+			chartData:[45, 52, 38, 24, 33, 26, 21, 20, 6]
+		},
+		totalDownloads: {
+			count: '678',
+			percent: "0.1%",
+			chartData:[35, 41, 62, 42, 13, 18, 29, 37, 36]
+		}
+	}
 	return (
 		<div className="p-2">
 			<Row gutter={[16, 16]} justify="center">
-				<Col span={24} lg={16}>
-					<BannerCard />
+				<Col span={24} lg={12}>
+					<Conversion count='38,566' percent={48} />
 				</Col>
-				<Col span={24} lg={8}>
-					<Space direction="vertical" size="large" className="h-full w-full justify-center">
-						<Conversion />
-						<Applications />
-					</Space>
+				<Col span={24} lg={12}>
+					<Applications count='45,566' percent={75}  />
 				</Col>
 			</Row>
 

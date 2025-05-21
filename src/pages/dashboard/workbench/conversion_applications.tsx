@@ -1,12 +1,15 @@
 import { Iconify } from "@/components/icon";
 import { themeVars } from "@/theme/theme.css";
 import { Progress } from "antd";
-
-export function Conversion() {
+type PropsType = {
+	count: string;
+	percent: number;
+};
+export function Conversion({ count, percent }:PropsType) {
 	return (
 		<Basic
-			percent={48}
-			title="38,566"
+			percent={percent}
+			title={count}
 			subtitle="Conversion"
 			iconify="tabler:user-filled"
 			bg={themeVars.colors.palette.primary.default}
@@ -14,11 +17,11 @@ export function Conversion() {
 		/>
 	);
 }
-export function Applications() {
+export function Applications({ count, percent }:PropsType) {
 	return (
 		<Basic
-			percent={75}
-			title="45,566"
+			percent={percent}
+			title={count}
 			subtitle="Applications"
 			iconify="ic:round-email"
 			bg={themeVars.colors.palette.info.default}

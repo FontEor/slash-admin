@@ -11,16 +11,20 @@ export default function CurrentDownload() {
 				<Typography.Title level={5}>Current Download</Typography.Title>
 			</header>
 			<main>
-				<ChartDonut />
+				<ChartDonut labels={labels} series={series} />
 			</main>
 		</Card>
 	);
 }
-
+type Props = {
+	labels:string[]
+	series:number[]
+}
 const series = [44, 55, 13, 43];
-function ChartDonut() {
+const labels = ["Mac", "Window", "IOS", "Android"]
+function ChartDonut({ labels, series }:Props) {
 	const chartOptions = useChart({
-		labels: ["Mac", "Window", "IOS", "Android"],
+		labels,
 		stroke: {
 			show: false,
 		},
@@ -51,7 +55,6 @@ function ChartDonut() {
 			},
 		},
 	});
-
 	return (
 		<Chart type="donut" series={series} options={chartOptions} height={360} />
 	);
