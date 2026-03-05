@@ -16,9 +16,7 @@ type MediaQueryConfig = {
 
 const buildMediaQuery = (config: MediaQueryConfig | string): string => {
 	if (typeof config === "string") return config;
-
 	const conditions: string[] = [];
-
 	if (config.minWidth) conditions.push(`(min-width: ${config.minWidth}px)`);
 	if (config.maxWidth) conditions.push(`(max-width: ${config.maxWidth}px)`);
 	if (config.minHeight) conditions.push(`(min-height: ${config.minHeight}px)`);
