@@ -33,6 +33,8 @@ function Workbench() {
 			chartData:[35, 41, 62, 42, 13, 18, 29, 37, 36]
 		}
 	}
+	const series = [44, 55, 13, 43];
+	const labels = ["Mac", "Window", "IOS", "Android"]
 	return (
 		<div className="p-2">
 			<Row gutter={[16, 16]} justify="center">
@@ -78,7 +80,7 @@ function Workbench() {
 
 			<Row gutter={[16, 16]} className="mt-4" justify="center">
 				<Col span={24} md={12} lg={8}>
-					<CurrentDownload />
+					<CurrentDownload labels={labels} series={series}/>
 				</Col>
 				<Col span={24} md={12} lg={16}>
 					<AreaDownload />

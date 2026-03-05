@@ -3,8 +3,11 @@ import { Typography } from "antd";
 import Card from "@/components/card";
 import Chart from "@/components/chart/chart";
 import useChart from "@/components/chart/useChart";
-
-export default function CurrentDownload() {
+type Props = {
+	labels:string[]
+	series:number[]
+}
+export default function CurrentDownload({ labels, series }:Props) {
 	return (
 		<Card className="flex-col">
 			<header className="self-start">
@@ -16,12 +19,6 @@ export default function CurrentDownload() {
 		</Card>
 	);
 }
-type Props = {
-	labels:string[]
-	series:number[]
-}
-const series = [44, 55, 13, 43];
-const labels = ["Mac", "Window", "IOS", "Android"]
 function ChartDonut({ labels, series }:Props) {
 	const chartOptions = useChart({
 		labels,
