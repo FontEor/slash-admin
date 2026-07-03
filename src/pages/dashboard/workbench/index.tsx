@@ -7,6 +7,8 @@ import TopAuthor from "./top-authors";
 import TopInstalled from "./top-installed";
 import TopRelated from "./top-related";
 import TotalCard from "./total-card";
+import { PriceDisplay } from "./price-display";
+import { QuantityAmountDisplay } from "./quantity-amount-display";
 function Workbench() {
 	const obj = {
 		conversion: {
@@ -38,6 +40,15 @@ function Workbench() {
 	return (
 		<div className="p-2">
 			<Row gutter={[16, 16]} justify="center">
+				<Col span={24} lg={12}>
+					<PriceDisplay />
+				</Col>
+				<Col span={24} lg={12}>
+					<QuantityAmountDisplay />
+				</Col>
+			</Row>
+
+			<Row gutter={[16, 16]} className="mt-4" justify="center">
 				<Col span={24} lg={12}>
 					<Conversion count='38,566' percent={48} />
 				</Col>
