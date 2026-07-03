@@ -11,7 +11,7 @@ export function QuantityAmountDisplay() {
   const decrement = useDecrementQuantity();
 
   return (
-    <Card title="数量与总金额" className="shadow-sm">
+    <Card title="数量" className="shadow-sm">
       <div className="space-y-2">
         <div className="text-lg font-semibold">数量: {quantity}</div>
       </div>
@@ -20,13 +20,13 @@ export function QuantityAmountDisplay() {
           onClick={decrement}
           className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
         >
-          减少
+          减少数量
         </button>
         <button
           onClick={increment}
           className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
         >
-          增加
+          增加数量
         </button>
       </div>
     </Card>
