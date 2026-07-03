@@ -1,5 +1,5 @@
 import { Card } from "antd";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   usePrice,
   useDecrementPrice,
@@ -14,11 +14,14 @@ export function PriceDisplay() {
   const getTotalAmount = useGetTotalAmount();
   const quantity = useQuantity();
   const [num, setNum] = useState(0);
+  const totalAmount = useMemo(() => {
+    return getTotalAmount();
+  }, [price, quantity, getTotalAmount]);
   return (
     <Card title="价格信息" className="shadow-sm">
       <div className="space-y-2">
         <div className="text-lg font-semibold text-green-600">
-          总金额: ¥{getTotalAmount()}
+          总金额: ¥{totalAmount}
         </div>
         <div className="text-lg font-semibold">价格: ¥{price}</div>
         <div className="text-lg font-semibold">数量: {num}</div>
