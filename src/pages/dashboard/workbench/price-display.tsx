@@ -6,14 +6,14 @@ import {
   useIncrementPrice,
   useGetTotalAmount,
 } from "@/store/priceStore";
-
+import { useQuantity } from "@/store/quantityStore";
 export function PriceDisplay() {
   const price = usePrice();
   const decrement = useDecrementPrice();
   const increment = useIncrementPrice();
   const getTotalAmount = useGetTotalAmount();
+  const quantity = useQuantity();
   const [num, setNum] = useState(0);
-
   return (
     <Card title="价格信息" className="shadow-sm">
       <div className="space-y-2">
@@ -21,7 +21,7 @@ export function PriceDisplay() {
           总金额: ¥{getTotalAmount()}
         </div>
         <div className="text-lg font-semibold">价格: ¥{price}</div>
-        <div className="text-lg font-semibold">测试num: {num}</div>
+        <div className="text-lg font-semibold">数量: {num}</div>
       </div>
 
       <button
@@ -40,7 +40,7 @@ export function PriceDisplay() {
         onClick={() => setNum((prev) => prev + 1)}
         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
       >
-        增加 num
+        num
       </button>
     </Card>
   );
