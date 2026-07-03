@@ -8,10 +8,10 @@ type PriceState = {
   incrementPrice: () => void;
 };
 
-const usePriceStoreBase = createSelectorHooks(create<PriceState>((set,get) => ({
+const usePriceStoreBase = createSelectorHooks(create<PriceState>((set) => ({
 	price: 100,
 	decrementPrice: () => {	set((state) => ({ price: state.price - 1 }))},
-  incrementPrice: () => {  set((state) => ({ price: state.price + 1 }))},
+  incrementPrice: () => { set((state) => ({ price: state.price + 1 }))},
 })));
 
 export const useTotalAmount = () => {
