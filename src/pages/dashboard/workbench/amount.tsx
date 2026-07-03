@@ -8,7 +8,7 @@ export function Amount() {
   const quantity = useQuantity();
   const totalAmount = useMemo(() => {
     return getTotalAmount();
-  }, [price, quantity, getTotalAmount]);
+  }, [price, quantity]);
   return (
     <Card title="总金额信息" className="shadow-sm">
       <div className="space-y-2">
